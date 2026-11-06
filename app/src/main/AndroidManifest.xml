@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 잔량·충전 상태 읽기 -->
+    <uses-permission android:name="pleos.car.permission.CAR_ENERGY" />
+    <!-- 충전 한도 설정 -->
+    <uses-permission android:name="pleos.car.permission.CONTROL_CAR_ENERGY" />
+    <!-- 배터리 용량 -->
+    <uses-permission android:name="pleos.car.permission.CAR_INFO" />
+    <!-- 음성 안내 -->
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:label="배터리 지킴이"
+        android:theme="@android:style/Theme.Material.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
